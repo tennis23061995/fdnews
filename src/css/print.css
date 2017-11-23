@@ -1,0 +1,38 @@
+.footer
+{
+background: #fff;
+border-top: 1px solid rgb(234, 234, 234);
+}
+.content .left
+{
+	background: #fff;
+	border-radius: 5px;
+}
+.content .right
+{
+	background: #fff;
+	border-radius: 5px;
+}
+.fa-facebook-official
+{
+	color: #516eab;
+	font-size: 20px;
+	margin-right: 10px;
+}
+.fa-youtube-play
+{
+	color: #e14e42;
+	font-size: 25px;
+	margin-right: 10px;
+}
+.fa-twitter
+{
+	color: #29c5f6;
+	font-size: 25px;
+	margin-right: 10px
+}
+.fa-google-plus
+{
+	color: #d34836;
+	font-size: 20px;
+}

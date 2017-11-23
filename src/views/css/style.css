@@ -1,0 +1,59 @@
+/** {
+  outline: 1px solid red !important;
+}*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -box-sizing: border-box;
+}
+
+body {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  background: black;
+}
+
+input {
+  background: grey;
+  font-size: 18px;
+}
+
+form {
+  display: inline-block;
+}
+
+.centered {
+  text-align: center;
+}
+
+#pizzaSize {
+  font-weight: 800;
+}
+
+.mover {
+  position: fixed;
+  width: 256px;
+  z-index: -1;
+  left: 0%; /* adjustment to positioning of pizzas when using transform: translateX*/
+  will-change: transform; /* suggestion to browser to place this element on its own layer */
+  transform: translateZ(0); /* places selected element on its own layer, (for older browsers)*/
+}
+
+img.mover {
+  width: 73px; /* pizza image width and height now defined in the css*/
+  height: 94px;
+}
+
+.randomPizzaContainer {
+  float: left;
+  display: flex;
+}
+
+.randomPizzaContainer:after {
+  content: "";
+  display: table;
+  clear:both;
+}
+
+ .container {
+  background-color: rgba(240, 60, 60, 0.8);
+}
