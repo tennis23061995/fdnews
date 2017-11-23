@@ -89,7 +89,42 @@
         width: 30%;
         float: right;
       }
-
+      .featured
+      {
+        height: 400px;
+        padding: 5px 0;
+    border-bottom: 1px solid rgb(234, 234, 234);
+      }
+      .featured img{
+        height: 100%;
+        min-width: 100%;
+      }
+      .featured .left
+      {
+        width: 65%;
+        height: 100%;
+      }
+      .featured .right
+      {
+        width: 35%;
+        height: 100%;
+      }
+      .featured .right .left
+      {
+        width: 100%;
+      }
+      .featured .right .right
+      {
+        width: 100%;
+      }
+      .featured .right .left
+      {
+        height: 50%;
+      }
+      .featured .right .right
+      {
+        height: 50%;
+      }
       .item{
         padding: 5px 0;
         border-top: 1px solid rgb(234, 234, 234);
@@ -150,6 +185,28 @@
           text-align: center;
           margin-top: 0;
         }
+        .featured{
+          height: auto;
+        }
+        .featured .left
+        {
+          width: 100%;
+          height: 300px;
+        }
+        .featured .right
+        {
+          width: 100%;
+        }
+        .featured .right .left
+        {
+          width: 50%;
+          height: 150px;
+        }
+        .featured .right .right
+        {
+          width: 50%;
+          height: 150px;
+        }
       }
     </style>
   </head>
@@ -168,6 +225,17 @@
       <div class="content">
         <div class="left">
           <div class="block">
+            <div class="featured">
+            <div class="left">
+              <img src="img/cam_be_like-large.jpg"/>
+            </div>
+            <div class="right">
+              <div class="left"><img src="img/cam_be_like-large.jpg"/></div>
+              <div class="right"><img src="img/cam_be_like-large.jpg"/></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
           <div class="block-title">Tin Mới</div>
           <div class="item"> <!-- using data uri for images -->
             <div class="item-left"><img src="img/cam_be_like-large.jpg"/>
@@ -203,6 +271,8 @@
         <div class="right">
           <div class="block">
             <div class="block-title">Xem Nhiều</div>
+            <div class="item"><a href="">Build Your Own 2048!</a> </div>
+            <div class="item"><a href="">Build Your Own 2048!</a> </div>
           </div>
           <div class="clearfix"></div>
         </div>
