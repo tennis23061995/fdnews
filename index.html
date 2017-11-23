@@ -28,22 +28,6 @@
         font-family: "Open Sans", sans-serif; color: #333;
       }
 
-      /*a {
-       color: #12C;
-      }
-
-      a:visited {
-        color: #61C;
-      }
-
-      a:focus {
-        outline: thin dotted;
-      }
-
-      a:hover,
-      a:active {
-        color: #c00; outline: 0;
-      }*/
       img {
         border: 0; max-width: 100%;
       }
@@ -52,11 +36,6 @@
         background: rgb(246, 246, 246);
       }
 
-      header,
-      footer,
-      .container {
-        max-width: 70em; margin: 0 auto;
-      }
 
       .left
       {
@@ -72,7 +51,7 @@
       {
         height: 400px;
         padding: 5px 0;
-    border-bottom: 1px solid rgb(234, 234, 234);
+        border-bottom: 1px solid rgb(234, 234, 234);
       }
       .featured img{
         height: 100%;
@@ -186,37 +165,111 @@
           width: 50%;
           height: 150px;
         }
+            }
+
+      .logo {
+        width: 60px;
+        float: left;
       }
-.logo{
 
-  float: left;
-}
-.logo img{
-  width: 60px;
-}
-.menu{
 
-}
-.search{
-  float: right;
-  color: #fff;
-  font-size: 40px;
+      body > header {
+      	background-color: rgb(117,176,32);
+      	width: 100%;
+        height: 60px;
+      }
+      body > header > div {
+      	margin: 0 auto;
+      }
+      body > header > div svg {
+      	box-sizing: border-box;
+      	height: 40px;
+      	padding: 2px;
+      	width: 40px;
+      }
 
-}
+      body > header > div > svg {
+      	float: right;
+      }
+      body > header > div > svg > line {
+      	stroke: #036;
+      	stroke-linecap: round;
+      }
+      body > header > div > nav {
+      	height: 100%;
+      }
+
+      /*Responsive layout to desktop*/
+      @media (min-width: 768.1px) {
+      	body > header > div {
+      		height: 60px;
+      	}
+      	body > header > div > svg {
+      		display: none;
+      	}
+      	body > header > div > nav {
+      		float: left;
+      	}
+      }
+      /*Responsive layout to smartphone*/
+      @media (max-width: 768px) {
+      	body > header > div > nav {
+      		clear: both;
+      	}
+      }
+      	 nav.DropDownMenu { color: #fff; }
+         @media (min-width: 1024.1px) {
+           footer,
+           .container {
+             max-width: 70em; margin: 0 auto;
+           }
+
+             body > header > div {
+           		width: 70em;
+           	}
+
+         }
+
+
     </style>
   </head>
 
   <body>
-    <div class="header">
-    <header> <!-- added data uri images -->
-      <div class="block">
-        <div class="logo"><img src="img/logo.png" /></div>
-        <div class="menu"></div>
-        <div class="search"><i class="fa fa-search"></i></div>
-      </div>
-    </header>
-    <div class="clearfix"></div>
-    </div>
+    <header>
+		<div>
+			<!--Logo-->
+			<a href="/">
+				<img class="logo" src="img/logo.png" />
+			</a>
+			<!--Mobile version opening button-->
+			<svg viewBox="0 0 8 8">
+				<line x1="1" x2="7" y1="2" y2="2"></line>
+				<line x1="1" x2="7" y1="4" y2="4"></line>
+				<line x1="1" x2="7" y1="6" y2="6"></line>
+			</svg>
+			<!--Drop down menu-->
+			<nav class="DropDownMenu">
+				<ul>
+					<li><a href="#">ITEM 1</a></li>
+					<li><a>ITEM 2 +</a>
+						<ul>
+							<li><a href="#">ITEM 2.1</a></li>
+							<li><a href="#">ITEM 2.2</a></li>
+							<li><a href="#">ITEM 2.3</a></li>
+						</ul>
+					</li>
+					<li><a>ITEM 3 +</a>
+						<ul>
+							<li><a href="#">ITEM 3.1</a></li>
+							<li><a href="#">ITEM 3.2</a></li>
+						</ul>
+					</li>
+					<li><a href="#">ITEM 4</a></li>
+					<li><a href="#">ITEM 5</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
     <div class="container">
       <div class="content">
         <div class="left">
