@@ -36,7 +36,6 @@
         background: rgb(246, 246, 246);
       }
 
-
       .left
       {
         width: 70%;
@@ -70,26 +69,16 @@
       .featured .right .left
       {
         width: 100%;
-      }
-      .featured .right .right
-      {
-        width: 100%;
-      }
-      .featured .right .left
-      {
         height: 50%;
       }
-      .featured .right .right
-      {
-        height: 50%;
-      }
+
       .item{
         padding: 5px 0;
         border-top: 1px solid rgb(234, 234, 234);
       }
       .item-left img{
         min-width: 100%;
-        min-height: 100%;
+        height: 180px;
       }
       .item-left
       {
@@ -100,9 +89,13 @@
       {
         width: 70%;
         float: right;
-        margin:0 -5px;
+        margin:10px -10px;
       }
-
+      .item-right a
+      {
+        text-decoration: none;
+        font-weight: bold;
+      }
       footer .right{
         text-align: right;
         margin-top: 25px;
@@ -149,7 +142,7 @@
         .featured .left
         {
           width: 100%;
-          height: 300px;
+          height: 500px;
         }
         .featured .right
         {
@@ -158,18 +151,16 @@
         .featured .right .left
         {
           width: 50%;
-          height: 150px;
-        }
-        .featured .right .right
-        {
-          width: 50%;
-          height: 150px;
+          height: 250px;
         }
             }
 
       .logo {
         width: 60px;
         float: left;
+      }
+      .right .item a{
+        text-decoration: none;
       }
 
 
@@ -182,16 +173,16 @@
       }
       body > header > div svg {
       	box-sizing: border-box;
-      	height: 40px;
-      	padding: 2px;
-      	width: 40px;
+      	height: 60px;
+      	padding: 2px 5px;
+      	width: 60px;
       }
 
       body > header > div > svg {
       	float: right;
       }
       body > header > div > svg > line {
-      	stroke: #036;
+      	stroke: #fff;
       	stroke-linecap: round;
       }
       body > header > div > nav {
@@ -219,7 +210,33 @@
       		font-size: 18px;
       		display: none;
       	}
+        .content .right .block-title
+        {
+          border-top: 1px solid rgb(234, 234, 234);
+        }
       }
+      @media (max-width: 414px) {
+        .featured .left
+        {
+          height: 300px;
+        }
+        .featured .right .left
+        {
+          height: 200px;
+        }
+        .item-left{
+          width: 40%;
+        }
+        .item-left img{
+          height: 120px;
+        }
+      .item-right{
+        width: 60%;
+      }
+      .summary{
+        display: none;
+      }
+      	}
       	 nav.DropDownMenu { color: #fff; }
          @media (min-width: 1024.1px) {
            footer,
@@ -231,6 +248,28 @@
            		width: 70em;
            	}
 
+         }
+         .featured span{
+           position: absolute;
+           left: 0;
+           bottom: 0;
+           margin-bottom: 0;
+           background-color: rgba(0,0,0,.6);
+           color: #fff;
+           width: 100%;
+           font-size: 18px;
+         }
+         .featured h4{
+           padding: 0 5px;
+         }
+         .featured .left{
+           position: relative;
+         }
+         .featured .right{
+           position: relative;
+         }
+         .featured .right h4{
+           font-size: 14px;
          }
 
 
@@ -254,14 +293,14 @@
 			<nav class="DropDownMenu">
 				<ul>
 					<li><a href="#">ITEM 1</a></li>
-					<li><a>ITEM 2 +</a>
+					<li><a href="">ITEM 2 +</a>
 						<ul>
 							<li><a href="#">ITEM 2.1</a></li>
 							<li><a href="#">ITEM 2.2</a></li>
 							<li><a href="#">ITEM 2.3</a></li>
 						</ul>
 					</li>
-					<li><a>ITEM 3 +</a>
+					<li><a href="">ITEM 3 +</a>
 						<ul>
 							<li><a href="#">ITEM 3.1</a></li>
 							<li><a href="#">ITEM 3.2</a></li>
@@ -280,11 +319,24 @@
           <div class="block">
             <div class="featured">
             <div class="left">
-              <img src="img/cam_be_like-large.jpg"/>
+              <a href="">
+                <img src="img/cam_be_like-large.jpg"/>
+                <span><h4>Trên bàn Vivo V7: Biến hoá vi diệu với những hình ảnh selfie</h4><span>
+              </a>
             </div>
             <div class="right">
-              <div class="left"><img src="img/cam_be_like-large.jpg"/></div>
-              <div class="right"><img src="img/cam_be_like-large.jpg"/></div>
+              <div class="left">
+                <a href="">
+                  <img src="img/cam_be_like-large.jpg"/>
+                  <span><h4>Trên bàn Vivo V7: Biến hoá vi diệu với những hình ảnh selfie</h4><span>
+                </a>
+              </div>
+              <div class="left">
+                <a href="">
+                  <img src="img/cam_be_like-large.jpg"/>
+                  <span><h4>Trên bàn Vivo V7: Biến hoá vi diệu với những hình ảnh selfie</h4><span>
+                </a>
+              </div>
               <div class="clearfix"></div>
             </div>
             <div class="clearfix"></div>
@@ -295,7 +347,8 @@
             </div>
             <div class="item-right">
             <a href="project-2048.html">Build Your Own 2048!</a>
-            <p>I made my own version of 2048. How cool is that!?</p>
+            <p class="summary">Sony mới đây đã đưa ra thông báo rằng, hãng đang trên đà phát triển mạnh mẽ để lập ra một kỉ lục mới về lợi nhuận hàng năm, dự kiến lên tới 4.2 tỷ USD. Đây là sự thành công từ các mảng thế mạnh của Sony như: Playstation, TV và Sony Music.</p>
+            <p class="category"><a href="">Điện Thoại</a></p>
           </div>
           <div class="clearfix"></div>
           </div>
@@ -304,7 +357,8 @@
             </div>
             <div class="item-right">
             <a href="project-2048.html">Build Your Own 2048!</a>
-            <p>I made my own version of 2048. How cool is that!?</p>
+            <p class="summary">Sony mới đây đã đưa ra thông báo rằng, hãng đang trên đà phát triển mạnh mẽ để lập ra một kỉ lục mới về lợi nhuận hàng năm, dự kiến lên tới 4.2 tỷ USD. Đây là sự thành công từ các mảng thế mạnh của Sony như: Playstation, TV và Sony Music.</p>
+            <p class="category"><a href="">Điện Thoại</a></p>
           </div>
           <div class="clearfix"></div>
           </div>
@@ -313,7 +367,8 @@
             </div>
             <div class="item-right">
             <a href="project-2048.html">Build Your Own 2048!</a>
-            <p>I made my own version of 2048. How cool is that!?</p>
+            <p class="summary">Sony mới đây đã đưa ra thông báo rằng, hãng đang trên đà phát triển mạnh mẽ để lập ra một kỉ lục mới về lợi nhuận hàng năm, dự kiến lên tới 4.2 tỷ USD. Đây là sự thành công từ các mảng thế mạnh của Sony như: Playstation, TV và Sony Music.</p>
+            <p class="category"><a href="">Điện Thoại</a></p>
           </div>
           <div class="clearfix"></div>
           </div>
