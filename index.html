@@ -89,7 +89,13 @@
       {
         width: 70%;
         float: right;
-        margin:10px -10px;
+        margin: 10px 0;
+      }
+      .summary,.category{
+        margin:10px;
+      }
+      .title{
+        margin: 0 10px;
       }
       .item-right a
       {
@@ -215,6 +221,7 @@
           border-top: 1px solid rgb(234, 234, 234);
         }
       }
+
       @media (max-width: 414px) {
         .featured .left
         {
@@ -272,7 +279,6 @@
            font-size: 14px;
          }
 
-
     </style>
   </head>
 
@@ -293,19 +299,20 @@
 			<nav class="DropDownMenu">
 				<ul>
 					<li><a href="#">ITEM 1</a></li>
-					<li><a href="">ITEM 2 +</a>
-						<ul>
+					<li><a href="" class="menu-title">ITEM 2</a><a href="#" class="btn-submenu">+</a>
+						<ul class="clearfix">
 							<li><a href="#">ITEM 2.1</a></li>
 							<li><a href="#">ITEM 2.2</a></li>
 							<li><a href="#">ITEM 2.3</a></li>
 						</ul>
 					</li>
-					<li><a href="">ITEM 3 +</a>
-						<ul>
+					<li><a href="" class="menu-title">ITEM 3</a><a href="#" class="btn-submenu">+</a>
+						<ul class="clearfix">
 							<li><a href="#">ITEM 3.1</a></li>
 							<li><a href="#">ITEM 3.2</a></li>
 						</ul>
 					</li>
+
 					<li><a href="#">ITEM 4</a></li>
 					<li><a href="#">ITEM 5</a></li>
 				</ul>
@@ -346,7 +353,7 @@
             <div class="item-left"><img data-src="img/cam_be_like-large.jpg"/>
             </div>
             <div class="item-right">
-            <a href="project-2048.html">Build Your Own 2048!</a>
+            <a class="title" href="project-2048.html">Build Your Own 2048!</a>
             <p class="summary">Sony mới đây đã đưa ra thông báo rằng, hãng đang trên đà phát triển mạnh mẽ để lập ra một kỉ lục mới về lợi nhuận hàng năm, dự kiến lên tới 4.2 tỷ USD. Đây là sự thành công từ các mảng thế mạnh của Sony như: Playstation, TV và Sony Music.</p>
             <p class="category"><a href="">Điện Thoại</a></p>
           </div>
@@ -356,7 +363,7 @@
             <div class="item-left"><img data-src="img/cam_be_like-large.jpg"/>
             </div>
             <div class="item-right">
-            <a href="project-2048.html">Build Your Own 2048!</a>
+            <a class="title" href="project-2048.html">Build Your Own 2048!</a>
             <p class="summary">Sony mới đây đã đưa ra thông báo rằng, hãng đang trên đà phát triển mạnh mẽ để lập ra một kỉ lục mới về lợi nhuận hàng năm, dự kiến lên tới 4.2 tỷ USD. Đây là sự thành công từ các mảng thế mạnh của Sony như: Playstation, TV và Sony Music.</p>
             <p class="category"><a href="">Điện Thoại</a></p>
           </div>
@@ -366,7 +373,7 @@
             <div class="item-left"><img data-src="img/cam_be_like-large.jpg"/>
             </div>
             <div class="item-right">
-            <a href="project-2048.html">Build Your Own 2048!</a>
+            <a class="title" href="project-2048.html">Build Your Own 2048!</a>
             <p class="summary">Sony mới đây đã đưa ra thông báo rằng, hãng đang trên đà phát triển mạnh mẽ để lập ra một kỉ lục mới về lợi nhuận hàng năm, dự kiến lên tới 4.2 tỷ USD. Đây là sự thành công từ các mảng thế mạnh của Sony như: Playstation, TV và Sony Music.</p>
             <p class="category"><a href="">Điện Thoại</a></p>
           </div>
